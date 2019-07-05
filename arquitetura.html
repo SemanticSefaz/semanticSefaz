@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SemanticSefaz</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/custom.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+  <body>
+		<div style="background-color: red">
+	    <nav class="navbar navbar-expand navbar-dark bg-dark">
+	        <a class="navbar-brand" href="#">SemanticSefaz </a>
+
+	        <div class="collapse navbar-collapse">
+	            <ul class="navbar-nav mr-auto">
+	                <li class="nav-item navoption"><a class="nav-link" href="index.html">Inicio</a></li>
+	                <li class="nav-item navoption"><a class="nav-link" href="visao_semantica.html">Visão Semântica</a></li>
+	                <li class="nav-item navoption"><a class="nav-link" href="edit_vis.html">Editar Visão</a></li>
+	                <li class="nav-item navoption"><a class="nav-link" href="mediador_semantico.html">Mediador Semântico</a></li>
+	                <li class="nav-item navoption"><a class="nav-link" href="mashup_builder.html">Mashup Builder</a></li>
+	                <li class="nav-item navoption"><a class="nav-link" href="mashup_especializado.html">Mashups Especializados</a></li>
+	            </ul>
+	        </div>
+	    </nav>
+	</div>
+	
+
+
+
+
+
+
+
+		<div class="container">
+			<div class="row">
+				<div >
+					<div class="text-center espaco">
+						<h2><i>Arquitetura do Portal Semântico</i></h2>
+			            <p class="textForRead">
+			                Um portal pode ser definido como uma aplicação web que age como uma porta de acesso entre usuários e uma variedade de diferentes serviços de alto nível.
+			                Este tipo de aplicação tem como principal finalidade prover um ambiente capaz de coletar e providenciar informações relevantes para um determinado domínio.
+			                Este ambiente é, em geral, composto  por um conjunto de ferramentas que permitem que o usuário seja capaz de, e.g., manipular dados apresentados pelo portal para extrair novas informações.
+
+			                <br><br>
+
+			                Estendendo o conceito de portal, tem-se a definição de <b>portal semântico</b> ou apenas SWP (<i>Semantic Web Portal</i>).
+			                Um SWP é um portal que tem como principal característica a adição de semântica em seus conteúdos e serviços, de tal forma que estes possam ser vistos como aplicações da web semântica para usuários de pequenas comunidades.
+
+			                <br><br>
+					</div>
+					<hr>
+				</div>
+
+
+
+				<div class="content">
+					<div class="grid">
+						<figure class="effect-zoe">
+							<img src="img/arquitetura_portal.png" alt="arquitetura do portal"/>
+							<figcaption>
+								<h2>Arquitetura <span><i>SemanticSefaz</i></span></h2>
+								
+								<p class="description">Arquitetura do portal <i>SemanticSefaz</i>.</p>
+							</figcaption>			
+						</figure>
+					</div>
+				</div>
+
+
+
+				<div id="descricaoArquitetura">
+					<h4>Cada uma das camadas tem sua descrição apresentada a seguir:</h4>
+					<ul>
+						<li><b>Fontes de dados:</b> Nesta camada estão definidas todas as fontes de dados utilizadas pelo portal semântico. As fontes de dados suportadas pelo portal semântico podem ser de diferentes tipos e proveniência, desde bases relacionais e grafos RDF até dados provenientes de sensores e dispositivos de IoT (<i>Internet Of Things</i>);
+						<li>
+							<b>Extração e anotação de dados:</b> Nesta camada estão os componentes que irão realizar o acesso às fontes de dados disponíveis na camada mais inferior, os chamados "extratores". Além desses componentes, esta camada também provê um conjunto de metadados sobre cada uma das fontes. Esses metadados são informações que vão desde o formato da fonte até comentários sobre os significados de elementos do esquema utilizado pela fonte;
+						</li>
+						<li>
+							<b>Ontologia de Domínio:</b>
+							A ontologia atua como uma camada de abstração. Ela provê uma visão integrada e semântica das múltiplas fontes de dados. Desta forma, usuários e aplicações  podem acessar, de forma transparente, às várias fontes heterogenias. Além disso, ela também é responsável pela adição de semântica aos dados;
+						</li>
+						<li>
+							<b>Integração Semântica:</b>
+							Esta camada é responsável por especificar o processo de resolução da heterogeneidade dos dados, incluindo a heterogeneidade semântica. Ela também é responsável pelo armazenamento e gerenciamento do resultado da integração semântica. Esse resultado é representado por um conjunto de especificações. Cada uma dessas especificações está associado a um passo necessário para a construção da integração semântica.
+						</li>
+						<li>
+							<b>Integração de Dados:</b> O resultado obtido na camada de integração semântica é utilizado na construção de uma visão homogênea sobre os dados. Essa visão pode utilizar um enfoque virtual (Mediador Semântico) ou um enfoque materializado (Mashup de Dados) para prover acesso aos dados; 
+						</li>
+						<li>
+							<b>Aplicação:</b> Na camada mais externa estão as aplicações que fazem uso das outras camadas para disponibilizar algum serviço para o usuário, como a geração de visualizações sobre os dados ou a aplicação de técnicas de mineração. 
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</div>
+		
+
+
+
+
+
+
+
+
+	
+	
+	<footer>
+		<div id="contato" class="inner-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 f-about">
+						<a href="index.html"><h1><span>Semantic</span>SUS</h1></a>
+						
+
+					</div>
+					<div class="col-md-4 f-contact">
+						<h3 class="widgetheading">Contato</h3>
+						<a href="#"><p><i class="fa fa-envelope"></i> semanticsefaz@gmail.com</p></a>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="last-div">
+			<div class="container">
+				<div class="row">
+					<div class="copyright">
+						© 2014 eNno Multi-purpose theme | <a target="_blank" href="http://bootstraptaste.com">Bootstraptaste</a>
+					</div>	
+                    <!-- 
+                        All links in the footer should remain intact. 
+                        Licenseing information is available at: http://bootstraptaste.com/license/
+                        You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=eNno
+                    -->				
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					
+				</div>
+			</div>
+			
+			<a href="" class="scrollup"><i class="fa fa-chevron-up"></i></a>	
+				
+			
+		</div>	
+	</footer>
+	
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.isotope.min.js"></script>
+	<script src="js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="js/fliplightbox.min.js"></script>
+	<script src="js/functions.js"></script>	
+	<script type="text/javascript">$('.portfolio').flipLightBox()</script>
+  </body>
+</html>
