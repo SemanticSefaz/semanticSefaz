@@ -20,7 +20,6 @@
 	                <li class="nav-item navoption"><a class="nav-link" href="visao_semantica.html">Visão Semântica</a></li>
 	                <li class="nav-item navoption"><a class="nav-link" href="edit_vis.html">Editar Visão Semântica</a></li>
 	                <li class="nav-item navoption"><a class="nav-link" href="mediador_semantico.html">Mediador Semântico</a></li>
-	                <li class="nav-item navoption"><a class="nav-link" href="mashup_builder.html">Mashup Builder</a></li>
 	                <li class="nav-item navoption"><a class="nav-link" href="mashup_especializado.html">Mashups Especializados</a></li>
 	            </ul>
 	        </div>
@@ -40,15 +39,15 @@
             Visão Semântica
         </p>
         <div class="textForRead">
-            A <b>visão semântica</b> se trata de uma visão unificada sobre as fontes de dados que utiliza uma ontologia para dar semântica unificada aos dados, independente da fonte de dados originaria. O portal atualmente SemanticSSUS publica duas bases de Dados do SUS: o SIM (Sistema de Informações sobre Mortalidade) e o SINASC(Sistema de Informações sobre NASCidos vivos). Essa fontes estão integradas semanticamente e já podem ser acessada através da visão ontológica do portal. 
+            A <b>visão semântica</b> se trata de uma visão unificada sobre as fontes de dados que utiliza uma ontologia para dar semântica unificada aos dados, independente da fonte de dados originaria. O portal atualmente SemanticSefaz publica três bases de Dados: SIASG, CNEP e CEIS. Essa fontes estão integradas semanticamente e já podem ser acessada através da visão ontológica do portal. 
             <!--Abaixo, ilustra o framework de integração semantica utilizado pelo SemanticSefaz (Figura 1a, bem como o resultado dessa integração: um conjunto de especificações relacionadas a cada etapa do processo de integração semântica.-->
 
 
 
         </div>    
-                    <figure class="text-center">
+            <figure class="text-center">
               <img class="mx-auto d-block figure-img img-fluid rounded z-depth-1" style="width: 30%" src="img/visaoAtual.png">
-              <figcaption class="figure-caption"><b><i>Figura 1: Representação da Integração Semântica realizada no processo de construção da Visão Semântica atual</i></b>
+            <figcaption class="figure-caption"><b><i>Figura 1: Representação  da Integração Semântica realizada no processo de construção da Visão Semântica atual</i></b>
             </figcaption>
             </figure>
 
@@ -63,15 +62,17 @@
                     <li>
                         <a class="conteudo_link" href="#fontes_publicadas"> Fontes de Dados Publicadas </a>
                         <ul style="list-style-type: none; text-indent: -2.5em;">
-                            <li><a class="conteudo_link" href="#fonte_sim"> 2.1 SIM</li></a>
-                            <li><a class="conteudo_link" href="#fonte_sinasc"> 2.2 SINASC</li></a>
+                            <li><a class="conteudo_link" href="#fonte_siasg"> 2.1 SIASG</li></a>
+                            <li><a class="conteudo_link" href="#fonte_cnep"> 2.2 CNEP</li></a>
+                            <li><a class="conteudo_link" href="#fonte_ceis"> 2.3 CEIS</li></a>
                         </ul>
                     </li>
                     <li>
                         <a class="conteudo_link" href="#is_vsl"> Visões Virtuais Locais </a>
                         <ul style="list-style-type: none; text-indent: -2.5em;">
-                            <li><a class="conteudo_link" href="#is_vsl_sim"> 3.1 Visão Local do SIM</li></a>
-                            <li><a class="conteudo_link" href="#is_vsl_sinasc"> 3.1 Visão Local do SINASC</li></a>
+                            <li><a class="conteudo_link" href="#is_vsl_siasg"> 3.1 Visão Local do SIASG</li></a>
+                            <li><a class="conteudo_link" href="#is_vsl_cnep"> 3.2 Visão Local do CNEP</li></a>
+                            <li><a class="conteudo_link" href="#is_vsl_ceis"> 3.3 Visão Local do CEIS</li></a>
                         </ul>
                     </li>
                     <li>
@@ -104,26 +105,32 @@
                 2. Fontes de Dados Publicadas
             </p>
             <div class="textForRead">
-                <div id="fonte_sim">
+                <div id="fonte_siasg">
                     
-                    <p class="subSectionOfText">1.1 SIM</p>
-                    O Sistema de Informação Sobre Mortalidade (SIM), desenvolvido pelo Ministério da Saúde, em 1975, é produto da unificação de mais de quarenta modelos de instrumentos utilizados, ao longo dos anos, para coletar dados sobre mortalidade no país. Possui variáveis que permitem, a partir da causa mortis atestada pelo médico, construir indicadores e processar análises epidemiológicas que contribuam para a eficiência da gestão em saúde.
+                    <p class="subSectionOfText">1.1 SIASG</p>
+                   O Sistema Integrado de Administração de Serviços Gerais – SIASG, instituído pelo art. 7º do Decreto nº1.094, de 23 de março de 1994, é o sistema informatizado de apoio às atividades operacionais do Sistema de Serviços Gerais – SISG. Sua finalidade é integrar os órgãos da Administração Pública Federal direta, autárquica e fundacional.
 
-                    O SIM foi informatizado em 1979. Doze anos depois, com a implantação do SUS e sob a premissa da descentralização teve a coleta de dados repassada à atribuição dos Estados e Municípios, através das suas respectivas Secretarias de Saúde. Com a finalidade de reunir dados quantitativos e qualitativos sobre óbitos ocorridos no Brasil, o SIM é considerado uma importante ferramenta de gestão na área da saúde que subsidiam a tomada de decisão em diversas áreas da assistência à saúde. No nível federal, sua gestão está afeta à Secretaria de Vigilância à Saúde.
-
-                    O Sistema de informações sobre mortalidade dispõe de um ambiente de compartilhamento de informações on-line com diversas utilidades e aplicações. O acesso a este ambiente é restrito a pessoas cadastradas, para garantir a confidencialidade dos dados pessoais dos envolvidos nos registros. 
-                    (<a href="http://svs.aids.gov.br/dantps/cgiae/sim/apresentacao/">Fonte</a>)
+                   O Siasg é o sistema onde são realizadas as operações das compras governamentais dos órgãos integrantes do Sisg. 
+                    (<a href="https://www.comprasgovernamentais.gov.br/index.php/comprasnet-siasg">Fonte</a>)
 
                 </div>
 
                 <br/>
 
-                <div id="fonte_sinasc">
-                    <p class="subSectionOfText">1.2 SINASC</p>
-                    O Sistema de Informações sobre Nascidos Vivos (SINASC), foi implantado oficialmente a partir de 1990, com o objetivo de coletar dados sobre os nascimentos informados em todo território nacional e fornecer dados sobre natalidade para todos os níveis do Sistema de Saúde.
+                <div id="fonte_cnep">
+                    <p class="subSectionOfText">1.2 CNEP</p>
+                   O Cadastro Nacional de Empresas Punidas (CNEP) apresenta a relação de empresas que sofreram qualquer das punições previstas na Lei nº 12.846/2013 (Lei Anticorrupção).
 
-                    A Secretaria de Vigilância em Saúde (SVS/MS) é gestora no Nível Nacional, sendo de sua responsabilidade, mais especificamente da Coordenação-Geral de Informações e Análises Epidemiológicas (CGIAE) e do Departamento de Vigilância de Doenças e Agravos não Transmissíveis e Promoção da Saúde (DANTPS) as alterações de layout bem como providências para impressão e distribuição dos formulários de Declaração de Nascido Vivo (DN) e dos manuais do Sistema. A implantação do SINASC ocorreu de forma gradual em todas as unidades da Federação e já vem apresentando em muitos municípios, desde o ano de 1994, um número maior de registros do que o publicado pelo IBGE com base nos dados de Cartório de Registro Civil. O Sistema possibilita, também, a construção de indicadores úteis para o planejamento de gestão dos serviços de saúde.
-                    (<a href="http://svs.aids.gov.br/dantps/cgiae/sinasc/apresentacao/">Fonte</a>)
+                   Ao dar transparência às punições, o CNEP funciona como um importante instrumento de controle social pela sociedade. Por ele, também é possível acompanhar os acordos de leniência firmados pelas empresas com o poder público, inclusive aqueles que eventualmente sejam descumpridos.
+                    (<a href="http://www.portaltransparencia.gov.br/pagina-interna/603244-cnep">Fonte</a>)
+                </div>
+
+                 <br/>
+
+                <div id="fonte_ceis">
+                    <p class="subSectionOfText">1.3 CEIS</p>
+                         O Cadastro Nacional de Empresas Inidôneas e Suspensas (CEIS) apresenta a relação de empresas e pessoas físicas que sofreram sanções que implicaram a restrição de participar de licitações ou de celebrar contratos com a Administração Pública.
+                    (<a href="http://www.portaltransparencia.gov.br/pagina-interna/603245-ceis">Fonte</a>)
                 </div>
                 
             </div>
@@ -142,8 +149,8 @@
                 <li>Mapeamentos: Especificam o relacionamento entre as entidades existentes na fonte de dados e os termos da ontologia de dominio.</li>    
                 </ul>
             
-            <div id="is_vsl_sim">
-                <i class="subSectionOfText"> 3.1 Visão Local do SIM (V<sub><small>SIM</small></sub>)</i>
+            <div id="is_vsl_siasg">
+                <i class="subSectionOfText"> 3.1 Visão Local do SIASG (V<sub><small>SIASG</small></sub>)</i>
                 <ul>
                     <li>
                         <a href="https://www.dropbox.com/s/chtk7i8calgqnd1/sbcas_sim.ttl?dl=1" download>
@@ -151,15 +158,31 @@
                         </a>
                     </li>
                     <li>
-                        <a href="img/sim.png" >
+                        <a href="img/siasg_visao_local.png" >
                         Representação visual da Ontologia Local
                         </a>
                     </li>
                 </ul>
             </div>    
             
-            <div id="is_vsl_sinasc">     
-                <i class="subSectionOfText"> 3.2 Visão Local do SINASC (V<sub><small>SINASC</small></sub>)</i>
+            <div id="is_vsl_cnep">     
+                <i class="subSectionOfText"> 3.2 Visão Local do CNEP (V<sub><small>CNEP</small></sub>)</i>
+                <ul>
+                    <li>                    
+                        <a href="https://www.dropbox.com/s/z36tzkmhn8r49bt/sbcas_sinasc.ttl?dl=1" download>
+                            Mapeamentos R2RML
+                        </a>
+                    </li>
+                    <li>
+                        <a href="img/sinasc.png">
+                            Representação visual da Ontologia Local 
+                        </a>                        
+                    </li>
+                </ul>
+            </div>
+
+            <div id="is_vsl_cnep">     
+                <i class="subSectionOfText"> 3.3 Visão Local do CEIS (V<sub><small>CEIS</small></sub>)</i>
                 <ul>
                     <li>                    
                         <a href="https://www.dropbox.com/s/z36tzkmhn8r49bt/sbcas_sinasc.ttl?dl=1" download>
