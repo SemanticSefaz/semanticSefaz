@@ -41,7 +41,7 @@
     <div id="page-content">
         <div class="jumbotron mt-3">
             <h1>SemanticSefaz</h1>
-            <p class="lead">Um Portal Semântico baseada em Ontologias e Dados Interligados para Acesso, Integração e Visualização de Dados do Sefaz</p>
+            <p class="lead">Um Portal Semântico baseada em Ontologias e Dados Interligados para Acesso, Integração e Visualização de Dados do Domínio de Gastos Públicos</p>
         </div>
         <br>
 
@@ -66,7 +66,7 @@
     <div id="sobre_semanticSefaz">
         <p class="sectionOfText">1. Sobre o SemanticSefaz </p>
         <div class="textForRead">
-            O <i>SemanticSefaz</i>, um portal semântico para acesso, analise e visualização de grande quantidade de dados da Secretaria da Fazenda do Ceará (Sefaz-CE).
+            O <i>SemanticSefaz</i>, é um portal semântico para acesso, análise e visualização de grande quantidade de dados da Secretaria da Fazenda do Ceará (Sefaz-CE).
             O Portal SemanticSefaz é baseado em um enfoque que combina ontologias e Dados Interligados para enfrentar os desafios no desenvolvimento de aplicações onde existe a necessidade de integrar fontes de dados heterogêneas.
             O SemanticSefaz tem como principal objetivo oferecer uma camada ontológica, conectada semanticamente aos dados, e que permita o acesso integrado aos dados.
             A plataforma disponibiliza também o serviço de integração semântica baseado na abordagem <i>pay-as-you-go</i>, o que garante flexibilidade e extensibilidade suficientes para que novas fontes de dados possam ser adicionadas ao portal.
@@ -126,12 +126,23 @@
               
               <li><b>Integração de Dados</b>: O Portal disponibiliza dois serviços de acesso às fontes de dados locais através da visão ontológica.
                 <ul>
-                  <li><a href="#consultando_visao">Mediador Semântico</a></li>    
-                  
+                  <li><a href="#consultando_visao">Mediador Semântico:</a>
+                      Permite que os usuários possam definir consultas ad-hoc sobre a ontologia de domínio em SPARQL, reformulando a consulta em consultas sobre as fontes de dados em suas linguagens de consultas nativas. Deste modo, o mediador semântico (SM,Semantic Mediator) garante que o resultado da consulta sempre estará atualizado com as fontes, dispensando o processo demorado e custoso da materialização RDF dos dados. Contudo, este módulo não realiza as etapas de limpeza e resolução de conflitos, não garantindo a qualidade do resultado. 
+
+                      Portanto, o SM é indicado para consultas rápidas e para tarefas não críticas, atuando como um primeiro mecanismo para obter entendimento sobre o problema estudado.
+                  </li>
+                  <li><a href="#consultando_visao">Triplificador:</a>
+                      Gera uma representação materializada em RDF da visão semântica. Este módulo realiza as etapas de limpeza e resolução de conflitos, garantindo a qualidade do resultado.
+
+                      Contudo, tal processo é custoso e demorado, assim não sendo passível a atualização em tempo real da visão materializada.
+
+                      No entanto, a visão é atualizada periodicamente, triplificando (gerando triplas RDF) e sincronizando as atualizações realizas nas fontes.
+                  </li>
 
                 </ul>
               </li>
-          </ul>
+
+              <li><b>Aplicação</b>: Na última camada estão os usuários e aplicações que fazem uso dos serviços de integração dos dados.</li>
         </div>
     </div>
 
@@ -150,7 +161,8 @@
               <li> Especificação das regras de fusão para as propriedades de $S$.  Estas regras são definidas com base na qualidade da fonte $S$, e são necessárias na resolução de conflitos gerados por inconsistências nos dados. 
               </li>
             </ol>
-            O portal atualmente <i>SemanticSSUS</i> publica duas bases de Dados do SUS: o SIM (Sistema de Informações sobre Mortalidade) e o SINASC(Sistema de Informações sobre NASCidos vivos). Essa fontes estão integradas semanticamente e já podem ser acessada através da visão ontológica do portal. O resultado da Integração semântica das fontes de dados SIM e SINASC pode ser visualizado na aba <a href="visao_semantica.html">Visão Semântica</a>. 
+
+            O portal atualmente <i>SemanticSefaz</i> publica duas bases de Dados do S: o SIM (Sistema de Informações sobre Mortalidade) e o SINASC(Sistema de Informações sobre NASCidos vivos). Essa fontes estão integradas semanticamente e já podem ser acessada através da visão ontológica do portal. O resultado da Integração semântica das fontes de dados SIM e SINASC pode ser visualizado na aba <a href="visao_semantica.html">Visão Semântica</a>. 
             <figure class="text-center">
               <img class="mx-auto d-block figure-img img-fluid rounded z-depth-1" src="img/frameworkeresultado.png" style="width: 60%">
               <figcaption class="figure-caption"><b><i> Figura 4a: Framework da utilizado para realizar a  Integração Semântica; Figura 4b: Resultado da Integração Semântica.</i></b></figcaption>

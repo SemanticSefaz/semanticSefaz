@@ -28,16 +28,36 @@
 	<div class="container">
 
 		<p class="sectionOfText">
-            Mashup RMN (Risco Morte Neonatal)
+            Mashup CDGES (Compras e Despesas Governamentais e Empresas Sancionadas)
         </p>
         <b class="subSectionOfText">1. Descrição:</b> 
         <p class="textForRead">
-        	Esse mashup foi utilizado no desenvolvimento de um modelo preditivo para estabelecer o risco de morte neonatal. O mashup RMN deverá conter as seguintes informações sobre as crianças que morreram antes de completarem 28 dias de vida (período neonatal):  peso, idade gestacional, Apgar, e prévios relatórios de  natimorto da mãe.
+            Com intuito de descobrir conhecimento acerca de eventuais compras governamentais realizadas por empresas sancionadas, esse mashup foi construindo utilizando as bases do SIASG, CEIS, CNEP e TCE. 
+
+            O mashup é composto por informações acerca de despesas (compras, contratos e outros) efetuadas por órgãos federais, estaduais e municipais com empresas sancionadas (inidôneas, suspensas e punidas.
+
+            Através do mashup, torna-se possível responder questões como:
+            <ul>
+                <li>Qual o porte de funcionários e a natureza jurídica das empresas sancionadas em um determinado estado?</li>
+                <li>Qual o fornecedor que mais fornece pra cada UASG?</li>
+                <li>Quantidade de itens mais envolvidos em processos de compras por empresas inidôneas presentes em um determinado ramo de negócio?</li>
+                <li>Qual a quantidade de contratos agrupados por cidade e / ou por ano?</li>
+                <li>Quais são os contratos firmados com fornecedores que já constavam e ainda constam no CEIS ou CNEP?</li>
+                <li>Para cada UASG, qual o percentual de fornecedores que está atualmente com  alguma sançã̧o?</li>
+                <li>Ramo de negócio com maior quantidade de fornecedores atualmente sancionados?</li>
+                <li>Quais empresas fornecedoras cadastrados no SICAF, que não têm restrições,  que podem fornecer determinado produto a um município?</li>
+                <li>Quais fornecedores possuem maior número de sanções no decorrer dos anos?</li>
+                <li>Quais liquidações, empenhos e pagamentos foram realizados para empresas inidôneas após a declaração de inidoneidade?</li>
+                <li>Quais contratos foram assinados após a declaração de inidoneidade?</li>
+                <li>Quais empresas apresentaram certificados de regularidade falsos ou cometeram falsidade ideológica?</li>
+                <li>Qual o item mais comprado por cada UASG?</li>
+                <li>Qual o tipo de licitação mais realizada por uma UASG?</li>
+            </ul>
             
         </p>
         <figure class="text-center">
               <img class="mx-auto d-block figure-img img-fluid rounded z-depth-1" style="width: 30%" src="img/mf.png">
-              <figcaption class="figure-caption"><b><i>Figura 1: Representação da Integração Semântica realizada no processo de construção do Mashup RMN</i></b>
+              <figcaption class="figure-caption"><b><i>Figura 1: Representação da Integração Semântica realizada no processo de construção do Mashup CDGES </i></b>
             </figcaption>
             </figure>
 		<hr/>
@@ -51,6 +71,7 @@
                 2.1 Ontologia de Aplicação do Mashup// Consulta de Especificação da Visão 
             </b> do Mashup-->
             <div class="textForRead">
+                <ul>
                		<li>
                     <a href="static/ontologies/osus_mashup_rmn.owl" download>
                         Download da Ontologia de Aplicação do Mashup
@@ -59,6 +80,7 @@
                     <li>
                     <a href="img/onto_mashup_rmn.png">Representação Visual Ontologia de Aplicação do Mashup</a>
                 	</li>
+                </ul>
             </div>
 <!--
             <pre>
@@ -96,13 +118,12 @@
                 
         <div class="textForRead">
             <ul>
-            	<li> SIM - Sistema de Informações sobre Mortalidade</li>
-            	<li> SINASC - Sistema de Informações sobre Nascidos Vivos</li>
+            	<li> SIASG - Sistema Integrado de Administração de Serviços Gerais</li>
+            	<li> CEIS - Cadastro de Empresas Inidôneas e Suspensas</li>
+                <li> CNEP - Cadastro Nacional de Empresas Punidas</li>
+                <li> TCE - Tribunal de Contas do Estado</li>
             </ul>
         </div>
-          
-        
-
 
         <b class="subSectionOfText">
             3.2 Visões Exportadas
@@ -112,7 +133,7 @@
 	        <li>	
                 <!-- TODO ontologia --> 
 	            <div class="subSectionOfText"> 
-                    Visão Exportada SIM (<i>E<sub><small>SIM</small></sub></i>)
+                    Visão Exportada SIASG (<i>E<sub><small>SIASG</small></sub></i>)
                 </div>
                 <ul>
 	               <li>   
@@ -135,7 +156,7 @@
 	        <li>  
 	        	
 	        	<div class="subSectionOfText"> 
-                    Visão Exportada SINASC (<i>E<sub><small>SINASC</small></sub></i>)
+                    Visão Exportada CEIS (<i>E<sub><small>CEIS</small></sub></i>)
                 </div>
     	        <ul>   
                    <li>
@@ -152,6 +173,49 @@
                 </ul>
                 
 	        </li>
+
+            <li>  
+                
+                <div class="subSectionOfText"> 
+                    Visão Exportada CNEP (<i>E<sub><small>CNEP</small></sub></i>)
+                </div>
+                <ul>   
+                   <li>
+                       <a href="https://www.dropbox.com/s/e35fmwg181syhbf/sbcas_sinasc_r.ttl?dl=1" download>
+                           Download Mapeamentos R2RML
+                       </a>
+                   </li>
+                   <li>
+                      <a href="img/o_sinasc_rmn.png">
+                            Representação visual da Ontologia Local 
+                        </a>       
+                    </li>
+                       
+                </ul>
+                
+            </li>
+
+            <li>  
+                
+                <div class="subSectionOfText"> 
+                    Visão Exportada TCE (<i>E<sub><small>TCE</small></sub></i>)
+                </div>
+                <ul>   
+                   <li>
+                       <a href="https://www.dropbox.com/s/e35fmwg181syhbf/sbcas_sinasc_r.ttl?dl=1" download>
+                           Download Mapeamentos R2RML
+                       </a>
+                   </li>
+                   <li>
+                      <a href="img/o_sinasc_rmn.png">
+                            Representação visual da Ontologia Local 
+                        </a>       
+                    </li>
+                       
+                </ul>
+                
+            </li>
+
     	</ul>
         </div>
         <!--
