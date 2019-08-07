@@ -1,1 +1,0 @@
-create table tabelas_ja_povoadas(nome_da_tabela text);
