@@ -1,0 +1,333 @@
+Prefix(:=<http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(osefaz:=<http://www.semanticweb.org/ontologies/2019/7/semanticSefaz>)
+
+
+Ontology(<http://www.semanticweb.org/ontologies/2019/7/semanticSefaz>
+
+Declaration(Class(<http://dbpedia.org/ontology/city>))
+Declaration(Class(:Contrato))
+Declaration(Class(:Despesa))
+Declaration(Class(:DespesaProjetoAtividade))
+Declaration(Class(:EditalLicitacao))
+Declaration(Class(:Fornecedor))
+Declaration(Class(:FornecedorPF))
+Declaration(Class(:FornecedorPJ))
+Declaration(Class(:Gestor))
+Declaration(Class(:ItensLicitacao))
+Declaration(Class(:ItensNota))
+Declaration(Class(:Licitacao))
+Declaration(Class(:Negociante))
+Declaration(Class(:NotaEmpenho))
+Declaration(Class(:OrcamentoMunicipal))
+Declaration(Class(:PessoaFisica))
+Declaration(Class(:PessoaJuridica))
+Declaration(Class(:PorteDaEmpresa))
+Declaration(Class(:Processo))
+Declaration(Class(:Programa))
+Declaration(Class(:Publicacao))
+Declaration(Class(:RamoDoNegocio))
+Declaration(Class(:Receita))
+Declaration(Class(:SancaoAplicada))
+Declaration(Class(:Sancionado))
+Declaration(Class(:SancionadoPF))
+Declaration(Class(:SancionadoPJ))
+Declaration(Class(<http://www.w3.org/ns/org#Oragnization>))
+Declaration(ObjectProperty(:aplicadaSobre))
+Declaration(ObjectProperty(:atividadeDo))
+Declaration(ObjectProperty(:comprimentoDos))
+Declaration(ObjectProperty(:contratadoPelo))
+Declaration(ObjectProperty(:contratante))
+Declaration(ObjectProperty(:cumpridoNas))
+Declaration(ObjectProperty(:despesaDo))
+Declaration(ObjectProperty(:elementoDa))
+Declaration(ObjectProperty(:empenhoDa))
+Declaration(ObjectProperty(:exercicioDo))
+Declaration(ObjectProperty(:geradaPelo))
+Declaration(ObjectProperty(:itemDa))
+Declaration(ObjectProperty(:licitanteDa))
+Declaration(ObjectProperty(:localizadoNo))
+Declaration(ObjectProperty(:moradorDo))
+Declaration(ObjectProperty(:negociadoPor))
+Declaration(ObjectProperty(:originadoDe))
+Declaration(ObjectProperty(:pertenceAo))
+Declaration(ObjectProperty(:programaDo))
+Declaration(ObjectProperty(:publicadoEm))
+Declaration(ObjectProperty(:publicou))
+Declaration(ObjectProperty(:receitaDo))
+Declaration(ObjectProperty(:responsavel))
+Declaration(ObjectProperty(:substituidoPor))
+Declaration(ObjectProperty(:temContrato))
+Declaration(ObjectProperty(:temPorte))
+Declaration(ObjectProperty(:temRamoDeNegocio))
+Declaration(ObjectProperty(<http://www.w3.org/ns/org#memberOf>))
+############################
+#   Object Properties
+############################
+
+# Object Property: :aplicadaSobre (:aplicadaSobre)
+
+SubObjectPropertyOf(:aplicadaSobre owl:topObjectProperty)
+ObjectPropertyDomain(:aplicadaSobre :SancaoAplicada)
+ObjectPropertyRange(:aplicadaSobre :Sancionado)
+
+# Object Property: :atividadeDo (:atividadeDo)
+
+SubObjectPropertyOf(:atividadeDo owl:topObjectProperty)
+ObjectPropertyDomain(:atividadeDo :DespesaProjetoAtividade)
+ObjectPropertyRange(:atividadeDo :Programa)
+
+# Object Property: :comprimentoDos (:comprimentoDos)
+
+SubObjectPropertyOf(:comprimentoDos owl:topObjectProperty)
+InverseObjectProperties(:comprimentoDos :cumpridoNas)
+ObjectPropertyDomain(:comprimentoDos :Licitacao)
+ObjectPropertyRange(:comprimentoDos :OrcamentoMunicipal)
+
+# Object Property: :contratadoPelo (:contratadoPelo)
+
+SubObjectPropertyOf(:contratadoPelo owl:topObjectProperty)
+ObjectPropertyDomain(:contratadoPelo :Negociante)
+ObjectPropertyRange(:contratadoPelo :Contrato)
+
+# Object Property: :contratante (:contratante)
+
+SubObjectPropertyOf(:contratante owl:topObjectProperty)
+ObjectPropertyDomain(:contratante :Contrato)
+ObjectPropertyRange(:contratante :Gestor)
+
+# Object Property: :cumpridoNas (:cumpridoNas)
+
+SubObjectPropertyOf(:cumpridoNas owl:topObjectProperty)
+ObjectPropertyDomain(:cumpridoNas :OrcamentoMunicipal)
+ObjectPropertyRange(:cumpridoNas :Licitacao)
+
+# Object Property: :despesaDo (:despesaDo)
+
+SubObjectPropertyOf(:despesaDo owl:topObjectProperty)
+ObjectPropertyDomain(:despesaDo :Despesa)
+ObjectPropertyRange(:despesaDo <http://www.w3.org/ns/org#Oragnization>)
+
+# Object Property: :elementoDa (:elementoDa)
+
+SubObjectPropertyOf(:elementoDa owl:topObjectProperty)
+ObjectPropertyDomain(:elementoDa :DespesaProjetoAtividade)
+ObjectPropertyRange(:elementoDa :Despesa)
+
+# Object Property: :empenhoDa (:empenhoDa)
+
+SubObjectPropertyOf(:empenhoDa owl:topObjectProperty)
+ObjectPropertyDomain(:empenhoDa :NotaEmpenho)
+ObjectPropertyRange(:empenhoDa :DespesaProjetoAtividade)
+
+# Object Property: :exercicioDo (:exercicioDo)
+
+SubObjectPropertyOf(:exercicioDo owl:topObjectProperty)
+ObjectPropertyDomain(:exercicioDo :Despesa)
+ObjectPropertyDomain(:exercicioDo :Receita)
+ObjectPropertyRange(:exercicioDo :OrcamentoMunicipal)
+
+# Object Property: :geradaPelo (:geradaPelo)
+
+SubObjectPropertyOf(:geradaPelo owl:topObjectProperty)
+ObjectPropertyDomain(:geradaPelo :Sancionado)
+ObjectPropertyRange(:geradaPelo :Processo)
+
+# Object Property: :itemDa (:itemDa)
+
+SubObjectPropertyOf(:itemDa owl:topObjectProperty)
+ObjectPropertyDomain(:itemDa :ItensLicitacao)
+ObjectPropertyRange(:itemDa :Licitacao)
+
+# Object Property: :licitanteDa (:licitanteDa)
+
+SubObjectPropertyOf(:licitanteDa owl:topObjectProperty)
+ObjectPropertyDomain(:licitanteDa :Negociante)
+ObjectPropertyRange(:licitanteDa :Licitacao)
+
+# Object Property: :localizadoNo (:localizadoNo)
+
+SubObjectPropertyOf(:localizadoNo owl:topObjectProperty)
+ObjectPropertyDomain(:localizadoNo <http://www.w3.org/ns/org#Oragnization>)
+ObjectPropertyRange(:localizadoNo <http://dbpedia.org/ontology/city>)
+
+# Object Property: :moradorDo (:moradorDo)
+
+SubObjectPropertyOf(:moradorDo owl:topObjectProperty)
+ObjectPropertyDomain(:moradorDo :Negociante)
+ObjectPropertyRange(:moradorDo <http://dbpedia.org/ontology/city>)
+
+# Object Property: :negociadoPor (:negociadoPor)
+
+SubObjectPropertyOf(:negociadoPor owl:topObjectProperty)
+ObjectPropertyDomain(:negociadoPor :NotaEmpenho)
+ObjectPropertyRange(:negociadoPor :Negociante)
+
+# Object Property: :originadoDe (:originadoDe)
+
+SubObjectPropertyOf(:originadoDe owl:topObjectProperty)
+ObjectPropertyDomain(:originadoDe :Contrato)
+ObjectPropertyRange(:originadoDe :Licitacao)
+
+# Object Property: :pertenceAo (:pertenceAo)
+
+ObjectPropertyDomain(:pertenceAo :OrcamentoMunicipal)
+ObjectPropertyRange(:pertenceAo <http://dbpedia.org/ontology/city>)
+
+# Object Property: :programaDo (:programaDo)
+
+SubObjectPropertyOf(:programaDo owl:topObjectProperty)
+ObjectPropertyDomain(:programaDo :Programa)
+ObjectPropertyRange(:programaDo :OrcamentoMunicipal)
+
+# Object Property: :publicadoEm (:publicadoEm)
+
+SubObjectPropertyOf(:publicadoEm owl:topObjectProperty)
+ObjectPropertyDomain(:publicadoEm :SancaoAplicada)
+ObjectPropertyRange(:publicadoEm :Publicacao)
+
+# Object Property: :publicou (:publicou)
+
+SubObjectPropertyOf(:publicou owl:topObjectProperty)
+ObjectPropertyDomain(:publicou :EditalLicitacao)
+ObjectPropertyRange(:publicou :Licitacao)
+
+# Object Property: :receitaDo (:receitaDo)
+
+SubObjectPropertyOf(:receitaDo owl:topObjectProperty)
+ObjectPropertyDomain(:receitaDo :Receita)
+ObjectPropertyRange(:receitaDo <http://www.w3.org/ns/org#Oragnization>)
+
+# Object Property: :responsavel (:responsavel)
+
+SubObjectPropertyOf(:responsavel owl:topObjectProperty)
+ObjectPropertyDomain(:responsavel :Licitacao)
+ObjectPropertyRange(:responsavel :Gestor)
+
+# Object Property: :substituidoPor (:substituidoPor)
+
+SubObjectPropertyOf(:substituidoPor owl:topObjectProperty)
+ObjectPropertyDomain(:substituidoPor :NotaEmpenho)
+ObjectPropertyRange(:substituidoPor :NotaEmpenho)
+
+# Object Property: :temContrato (:temContrato)
+
+SubObjectPropertyOf(:temContrato owl:topObjectProperty)
+ObjectPropertyDomain(:temContrato :Contrato)
+ObjectPropertyRange(:temContrato :Fornecedor)
+
+# Object Property: :temPorte (:temPorte)
+
+SubObjectPropertyOf(:temPorte owl:topObjectProperty)
+ObjectPropertyDomain(:temPorte :FornecedorPJ)
+ObjectPropertyRange(:temPorte :PorteDaEmpresa)
+
+# Object Property: :temRamoDeNegocio (:temRamoDeNegocio)
+
+SubObjectPropertyOf(:temRamoDeNegocio owl:topObjectProperty)
+ObjectPropertyDomain(:temRamoDeNegocio :FornecedorPJ)
+ObjectPropertyRange(:temRamoDeNegocio :RamoDoNegocio)
+
+# Object Property: <http://www.w3.org/ns/org#memberOf> (<http://www.w3.org/ns/org#memberOf>)
+
+ObjectPropertyDomain(<http://www.w3.org/ns/org#memberOf> :Gestor)
+ObjectPropertyRange(<http://www.w3.org/ns/org#memberOf> <http://www.w3.org/ns/org#Oragnization>)
+
+
+############################
+#   Classes
+############################
+
+# Class: :Contrato (:Contrato)
+
+
+# Class: :Despesa (:Despesa)
+
+
+# Class: :DespesaProjetoAtividade (:DespesaProjetoAtividade)
+
+
+# Class: :EditalLicitacao (:EditalLicitacao)
+
+
+# Class: :Fornecedor (:Fornecedor)
+
+
+# Class: :FornecedorPF (:FornecedorPF)
+
+SubClassOf(:FornecedorPF :Fornecedor)
+DisjointClasses(:FornecedorPF :FornecedorPJ)
+
+# Class: :FornecedorPJ (:FornecedorPJ)
+
+SubClassOf(:FornecedorPJ :Fornecedor)
+
+# Class: :Gestor (:Gestor)
+
+SubClassOf(:Gestor :PessoaFisica)
+DisjointClasses(:Gestor :Negociante)
+
+# Class: :ItensLicitacao (:ItensLicitacao)
+
+
+# Class: :ItensNota (:ItensNota)
+
+
+# Class: :Licitacao (:Licitacao)
+
+
+# Class: :Negociante (:Negociante)
+
+SubClassOf(:Negociante :PessoaFisica)
+
+# Class: :NotaEmpenho (:NotaEmpenho)
+
+
+# Class: :OrcamentoMunicipal (:OrcamentoMunicipal)
+
+
+# Class: :PessoaFisica (:PessoaFisica)
+
+
+# Class: :PorteDaEmpresa (:PorteDaEmpresa)
+
+
+# Class: :Processo (:Processo)
+
+
+# Class: :Programa (:Programa)
+
+
+# Class: :Publicacao (:Publicacao)
+
+
+# Class: :RamoDoNegocio (:RamoDoNegocio)
+
+
+# Class: :Receita (:Receita)
+
+
+# Class: :SancaoAplicada (:SancaoAplicada)
+
+
+# Class: :Sancionado (:Sancionado)
+
+
+# Class: :SancionadoPF (:SancionadoPF)
+
+SubClassOf(:SancionadoPF :PessoaFisica)
+SubClassOf(:SancionadoPF :Sancionado)
+DisjointClasses(:SancionadoPF :SancionadoPJ)
+
+# Class: :SancionadoPJ (:SancionadoPJ)
+
+SubClassOf(:SancionadoPJ :PessoaJuridica)
+SubClassOf(:SancionadoPJ :Sancionado)
+
+
+DisjointClasses(:Contrato :Despesa :DespesaProjetoAtividade :EditalLicitacao :Fornecedor :ItensLicitacao :ItensNota :Licitacao :NotaEmpenho :OrcamentoMunicipal :PessoaFisica :PorteDaEmpresa :Processo :Programa :Publicacao :RamoDoNegocio :Receita :SancaoAplicada :Sancionado)
+)
