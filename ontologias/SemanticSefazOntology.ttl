@@ -1,211 +1,210 @@
-@prefix : <http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix osefaz: <http://www.semanticweb.org/ontologies/2019/7/semanticSefaz> .
+@prefix osefaz: <http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#> .
 @base <http://www.semanticweb.org/ontologies/2019/7/semanticSefaz> .
 
-<http://www.semanticweb.org/ontologies/2019/7/semanticSefaz> rdf:type owl:Ontology .
+###<http://www.semanticweb.org/ontologies/2019/7/semanticSefaz> rdf:type owl:Ontology .
 
 #################################################################
 #    Object Properties
 #################################################################
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#aplicadaSobre
-:aplicadaSobre rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf owl:topObjectProperty ;
-               rdfs:domain :SancaoAplicada ;
-               rdfs:range :Sancionado .
+osefaz:aplicadaSobre rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty ;
+                     rdfs:domain osefaz:SancaoAplicada ;
+                     rdfs:range osefaz:Sancionado .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#atividadeDo
-:atividadeDo rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf owl:topObjectProperty ;
-             rdfs:domain :DespesaProjetoAtividade ;
-             rdfs:range :Programa .
+osefaz:atividadeDo rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:domain osefaz:DespesaProjetoAtividade ;
+                   rdfs:range osefaz:Programa .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#comprimentoDos
-:comprimentoDos rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf owl:topObjectProperty ;
-                owl:inverseOf :cumpridoNas ;
-                rdfs:domain :Licitacao ;
-                rdfs:range :OrcamentoMunicipal .
+osefaz:comprimentoDos rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf owl:topObjectProperty ;
+                      owl:inverseOf osefaz:cumpridoNas ;
+                      rdfs:domain osefaz:Licitacao ;
+                      rdfs:range osefaz:OrcamentoMunicipal .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#contratadoPelo
-:contratadoPelo rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf owl:topObjectProperty ;
-                rdfs:domain :Negociante ;
-                rdfs:range :Contrato .
+osefaz:contratadoPelo rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf owl:topObjectProperty ;
+                      rdfs:domain osefaz:Negociante ;
+                      rdfs:range osefaz:Contrato .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#contratante
-:contratante rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf owl:topObjectProperty ;
-             rdfs:domain :Contrato ;
-             rdfs:range :Gestor .
+osefaz:contratante rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:domain osefaz:Contrato ;
+                   rdfs:range osefaz:Gestor .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#cumpridoNas
-:cumpridoNas rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf owl:topObjectProperty ;
-             rdfs:domain :OrcamentoMunicipal ;
-             rdfs:range :Licitacao .
+osefaz:cumpridoNas rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:domain osefaz:OrcamentoMunicipal ;
+                   rdfs:range osefaz:Licitacao .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#despesaDo
-:despesaDo rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf owl:topObjectProperty ;
-           rdfs:domain :Despesa ;
-           rdfs:range <http://www.w3.org/ns/org#Oragnization> .
+osefaz:despesaDo rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 rdfs:domain osefaz:Despesa ;
+                 rdfs:range <http://www.w3.org/ns/org#Oragnization> .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#elementoDa
-:elementoDa rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf owl:topObjectProperty ;
-            rdfs:domain :DespesaProjetoAtividade ;
-            rdfs:range :Despesa .
+osefaz:elementoDa rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:domain osefaz:DespesaProjetoAtividade ;
+                  rdfs:range osefaz:Despesa .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#empenhoDa
-:empenhoDa rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf owl:topObjectProperty ;
-           rdfs:domain :NotaEmpenho ;
-           rdfs:range :DespesaProjetoAtividade .
+osefaz:empenhoDa rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 rdfs:domain osefaz:NotaEmpenho ;
+                 rdfs:range osefaz:DespesaProjetoAtividade .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#exercicioDo
-:exercicioDo rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf owl:topObjectProperty ;
-             rdfs:domain :Despesa ,
-                         :Receita ;
-             rdfs:range :OrcamentoMunicipal .
+osefaz:exercicioDo rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:domain osefaz:Despesa ,
+                               osefaz:Receita ;
+                   rdfs:range osefaz:OrcamentoMunicipal .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#geradaPelo
-:geradaPelo rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf owl:topObjectProperty ;
-            rdfs:domain :Sancionado ;
-            rdfs:range :Processo .
+osefaz:geradaPelo rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:domain osefaz:Sancionado ;
+                  rdfs:range osefaz:Processo .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#itemDa
-:itemDa rdf:type owl:ObjectProperty ;
-        rdfs:subPropertyOf owl:topObjectProperty ;
-        rdfs:domain :ItensLicitacao ;
-        rdfs:range :Licitacao .
+osefaz:itemDa rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:domain osefaz:ItensLicitacao ;
+              rdfs:range osefaz:Licitacao .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#licitanteDa
-:licitanteDa rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf owl:topObjectProperty ;
-             rdfs:domain :Negociante ;
-             rdfs:range :Licitacao .
+osefaz:licitanteDa rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:domain osefaz:Negociante ;
+                   rdfs:range osefaz:Licitacao .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#localizadoNo
-:localizadoNo rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf owl:topObjectProperty ;
-              rdfs:domain <http://www.w3.org/ns/org#Oragnization> ;
-              rdfs:range <http://dbpedia.org/ontology/city> .
+osefaz:localizadoNo rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:domain <http://www.w3.org/ns/org#Oragnization> ;
+                    rdfs:range <http://dbpedia.org/ontology/city> .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#moradorDo
-:moradorDo rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf owl:topObjectProperty ;
-           rdfs:domain :Negociante ;
-           rdfs:range <http://dbpedia.org/ontology/city> .
+osefaz:moradorDo rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 rdfs:domain osefaz:Negociante ;
+                 rdfs:range <http://dbpedia.org/ontology/city> .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#negociadoPor
-:negociadoPor rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf owl:topObjectProperty ;
-              rdfs:domain :NotaEmpenho ;
-              rdfs:range :Negociante .
+osefaz:negociadoPor rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:domain osefaz:NotaEmpenho ;
+                    rdfs:range osefaz:Negociante .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#originadoDe
-:originadoDe rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf owl:topObjectProperty ;
-             rdfs:domain :Contrato ;
-             rdfs:range :Licitacao .
+osefaz:originadoDe rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:domain osefaz:Contrato ;
+                   rdfs:range osefaz:Licitacao .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#pertenceAo
-:pertenceAo rdf:type owl:ObjectProperty ;
-            rdfs:domain :OrcamentoMunicipal ;
-            rdfs:range <http://dbpedia.org/ontology/city> .
+osefaz:pertenceAo rdf:type owl:ObjectProperty ;
+                  rdfs:domain osefaz:OrcamentoMunicipal ;
+                  rdfs:range <http://dbpedia.org/ontology/city> .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#programaDo
-:programaDo rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf owl:topObjectProperty ;
-            rdfs:domain :Programa ;
-            rdfs:range :OrcamentoMunicipal .
+osefaz:programaDo rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:domain osefaz:Programa ;
+                  rdfs:range osefaz:OrcamentoMunicipal .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#publicadoEm
-:publicadoEm rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf owl:topObjectProperty ;
-             rdfs:domain :SancaoAplicada ;
-             rdfs:range :Publicacao .
+osefaz:publicadoEm rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:domain osefaz:SancaoAplicada ;
+                   rdfs:range osefaz:Publicacao .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#publicou
-:publicou rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf owl:topObjectProperty ;
-          rdfs:domain :EditalLicitacao ;
-          rdfs:range :Licitacao .
+osefaz:publicou rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:domain osefaz:EditalLicitacao ;
+                rdfs:range osefaz:Licitacao .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#receitaDo
-:receitaDo rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf owl:topObjectProperty ;
-           rdfs:domain :Receita ;
-           rdfs:range <http://www.w3.org/ns/org#Oragnization> .
+osefaz:receitaDo rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 rdfs:domain osefaz:Receita ;
+                 rdfs:range <http://www.w3.org/ns/org#Oragnization> .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#responsavel
-:responsavel rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf owl:topObjectProperty ;
-             rdfs:domain :Licitacao ;
-             rdfs:range :Gestor .
+osefaz:responsavel rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:domain osefaz:Licitacao ;
+                   rdfs:range osefaz:Gestor .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#substituidoPor
-:substituidoPor rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf owl:topObjectProperty ;
-                rdfs:domain :NotaEmpenho ;
-                rdfs:range :NotaEmpenho .
+osefaz:substituidoPor rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf owl:topObjectProperty ;
+                      rdfs:domain osefaz:NotaEmpenho ;
+                      rdfs:range osefaz:NotaEmpenho .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#temContrato
-:temContrato rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf owl:topObjectProperty ;
-             rdfs:domain :Contrato ;
-             rdfs:range :Fornecedor .
+osefaz:temContrato rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:domain osefaz:Contrato ;
+                   rdfs:range osefaz:Fornecedor .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#temPorte
-:temPorte rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf owl:topObjectProperty ;
-          rdfs:domain :FornecedorPJ ;
-          rdfs:range :PorteDaEmpresa .
+osefaz:temPorte rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:domain osefaz:FornecedorPJ ;
+                rdfs:range osefaz:PorteDaEmpresa .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#temRamoDeNegocio
-:temRamoDeNegocio rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf owl:topObjectProperty ;
-                  rdfs:domain :FornecedorPJ ;
-                  rdfs:range :RamoDoNegocio .
+osefaz:temRamoDeNegocio rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf owl:topObjectProperty ;
+                        rdfs:domain osefaz:FornecedorPJ ;
+                        rdfs:range osefaz:RamoDoNegocio .
 
 
 ###  http://www.w3.org/ns/org#memberOf
 <http://www.w3.org/ns/org#memberOf> rdf:type owl:ObjectProperty ;
-                                    rdfs:domain :Gestor ;
+                                    rdfs:domain osefaz:Gestor ;
                                     rdfs:range <http://www.w3.org/ns/org#Oragnization> .
 
 
@@ -218,118 +217,118 @@
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#Contrato
-:Contrato rdf:type owl:Class .
+osefaz:Contrato rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#Despesa
-:Despesa rdf:type owl:Class .
+osefaz:Despesa rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#DespesaProjetoAtividade
-:DespesaProjetoAtividade rdf:type owl:Class .
+osefaz:DespesaProjetoAtividade rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#EditalLicitacao
-:EditalLicitacao rdf:type owl:Class .
+osefaz:EditalLicitacao rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#Fornecedor
-:Fornecedor rdf:type owl:Class .
+osefaz:Fornecedor rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#FornecedorPF
-:FornecedorPF rdf:type owl:Class ;
-              rdfs:subClassOf :Fornecedor ;
-              owl:disjointWith :FornecedorPJ .
+osefaz:FornecedorPF rdf:type owl:Class ;
+                    rdfs:subClassOf osefaz:Fornecedor ;
+                    owl:disjointWith osefaz:FornecedorPJ .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#FornecedorPJ
-:FornecedorPJ rdf:type owl:Class ;
-              rdfs:subClassOf :Fornecedor .
+osefaz:FornecedorPJ rdf:type owl:Class ;
+                    rdfs:subClassOf osefaz:Fornecedor .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#Gestor
-:Gestor rdf:type owl:Class ;
-        rdfs:subClassOf :PessoaFisica ;
-        owl:disjointWith :Negociante .
+osefaz:Gestor rdf:type owl:Class ;
+              rdfs:subClassOf osefaz:PessoaFisica ;
+              owl:disjointWith osefaz:Negociante .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#ItensLicitacao
-:ItensLicitacao rdf:type owl:Class .
+osefaz:ItensLicitacao rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#ItensNota
-:ItensNota rdf:type owl:Class .
+osefaz:ItensNota rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#Licitacao
-:Licitacao rdf:type owl:Class .
+osefaz:Licitacao rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#Negociante
-:Negociante rdf:type owl:Class ;
-            rdfs:subClassOf :PessoaFisica .
+osefaz:Negociante rdf:type owl:Class ;
+                  rdfs:subClassOf osefaz:PessoaFisica .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#NotaEmpenho
-:NotaEmpenho rdf:type owl:Class .
+osefaz:NotaEmpenho rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#OrcamentoMunicipal
-:OrcamentoMunicipal rdf:type owl:Class .
+osefaz:OrcamentoMunicipal rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#PessoaFisica
-:PessoaFisica rdf:type owl:Class .
+osefaz:PessoaFisica rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#PessoaJuridica
-:PessoaJuridica rdf:type owl:Class .
+osefaz:PessoaJuridica rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#PorteDaEmpresa
-:PorteDaEmpresa rdf:type owl:Class .
+osefaz:PorteDaEmpresa rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#Processo
-:Processo rdf:type owl:Class .
+osefaz:Processo rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#Programa
-:Programa rdf:type owl:Class .
+osefaz:Programa rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#Publicacao
-:Publicacao rdf:type owl:Class .
+osefaz:Publicacao rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#RamoDoNegocio
-:RamoDoNegocio rdf:type owl:Class .
+osefaz:RamoDoNegocio rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#Receita
-:Receita rdf:type owl:Class .
+osefaz:Receita rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#SancaoAplicada
-:SancaoAplicada rdf:type owl:Class .
+osefaz:SancaoAplicada rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#Sancionado
-:Sancionado rdf:type owl:Class .
+osefaz:Sancionado rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#SancionadoPF
-:SancionadoPF rdf:type owl:Class ;
-              rdfs:subClassOf :PessoaFisica ,
-                              :Sancionado ;
-              owl:disjointWith :SancionadoPJ .
+osefaz:SancionadoPF rdf:type owl:Class ;
+                    rdfs:subClassOf osefaz:PessoaFisica ,
+                                    osefaz:Sancionado ;
+                    owl:disjointWith osefaz:SancionadoPJ .
 
 
 ###  http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#SancionadoPJ
-:SancionadoPJ rdf:type owl:Class ;
-              rdfs:subClassOf :PessoaJuridica ,
-                              :Sancionado .
+osefaz:SancionadoPJ rdf:type owl:Class ;
+                    rdfs:subClassOf osefaz:PessoaJuridica ,
+                                    osefaz:Sancionado .
 
 
 ###  http://www.w3.org/ns/org#Oragnization
@@ -340,28 +339,28 @@
 #    General axioms
 #################################################################
 
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :Contrato
-                :Despesa
-                :DespesaProjetoAtividade
-                :EditalLicitacao
-                :Fornecedor
-                :ItensLicitacao
-                :ItensNota
-                :Licitacao
-                :NotaEmpenho
-                :OrcamentoMunicipal
-                :PessoaFisica
-                :PorteDaEmpresa
-                :Processo
-                :Programa
-                :Publicacao
-                :RamoDoNegocio
-                :Receita
-                :SancaoAplicada
-                :Sancionado
-              )
-] .
+#[ rdf:type owl:AllDisjointClasses ;
+#  owl:members ( osefaz:Contrato
+#                osefaz:Despesa
+#                osefaz:DespesaProjetoAtividade
+#                osefaz:EditalLicitacao
+#                osefaz:Fornecedor
+#                osefaz:ItensLicitacao
+#                osefaz:ItensNota
+#                osefaz:Licitacao
+#                osefaz:NotaEmpenho
+#                osefaz:OrcamentoMunicipal
+#                osefaz:PessoaFisica
+#                osefaz:PorteDaEmpresa
+#                osefaz:Processo
+#                osefaz:Programa
+#                osefaz:Publicacao
+#                osefaz:RamoDoNegocio
+#                osefaz:Receita
+#                osefaz:SancaoAplicada
+#                osefaz:Sancionado
+#              )
+#] .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
