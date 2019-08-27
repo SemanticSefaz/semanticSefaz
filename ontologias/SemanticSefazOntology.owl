@@ -3,7 +3,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix osefaz: <http://www.semanticweb.org/ontologies/2019/7/semanticSefaz#> .
+@prefix osefaz: <http://osefaz/> .
 @base <http://www.semanticweb.org/ontologies/2019/7/semanticSefaz> .
 
 ###<http://www.semanticweb.org/ontologies/2019/7/semanticSefaz> rdf:type owl:Ontology .
