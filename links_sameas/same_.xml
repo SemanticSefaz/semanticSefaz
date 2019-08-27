@@ -1,0 +1,51 @@
+<Silk>
+<Prefixes>
+<Prefix id="rdf" namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+<Prefix id="owl" namespace="http://www.w3.org/2002/07/owl#"/>
+<Prefix id="rdfs" namespace="http://www.w3.org/2000/01/rdf-schema#"/>
+<Prefix id="arida" namespace="http://www.arida.com/ontology/"/>
+<Prefix id="foaf" namespace="http://xmlns.com/foaf/0.1/"/>
+</Prefixes>
+<DataSources>
+<Dataset id="mashup" type="file">
+<Param name="file" value="mashup.nt"/>
+<Param name="format" value="N-Triples"/>
+<Param name="graph" value=""/>
+</Dataset>
+<Dataset id="sefaz" type="file">
+<Param name="file" value="sefaz.ttl"/>
+<Param name="format" value="Turtle"/>
+<Param name="graph" value=""/>
+</Dataset>
+</DataSources>
+<Interlinks>
+<Interlink id="Fornecedor">
+<SourceDataset dataSource="mashup" var="a" typeUri="http://www.arida.com/ontology/Fornecedor">
+<RestrictTo> </RestrictTo>
+</SourceDataset>
+<TargetDataset dataSource="sefaz" var="b" typeUri="http://osefaz/Negociante">
+<RestrictTo> </RestrictTo>
+</TargetDataset>
+<LinkageRule linkType="owl:sameAs">
+<Compare id="levenshteinDistance1" required="true" weight="1" metric="levenshteinDistance" threshold="5.0" indexing="true">
+<Input id="sourcePath1" path="arida:nome_fornecedor"/>
+<Input id="targetPath1" path="foaf:name"/>
+<Param name="minChar" value="0"/>
+<Param name="maxChar" value="z"/>
+</Compare>
+<Filter limit="1"/>
+</LinkageRule>
+<Outputs>
+<Output id="saida"/>
+</Outputs>
+</Interlink>
+</Interlinks>
+<Transforms> </Transforms>
+<Outputs>
+<Dataset id="saida" type="file">
+<Param name="file" value="saida"/>
+<Param name="format" value="N-Triples"/>
+<Param name="graph" value=""/>
+</Dataset>
+</Outputs>
+</Silk>
